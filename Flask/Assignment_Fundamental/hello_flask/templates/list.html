@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>heres a list of champions</h1>
+    <ul>
+        {% for champion_name in champions %}
+        <li>
+            {%if champion_name == "Ash"%}
+            is the best adc
+            {%endif%}
+            {{champion_name}}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
