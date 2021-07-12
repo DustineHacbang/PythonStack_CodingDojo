@@ -8,20 +8,40 @@
 
     <title>Document</title>
 
+<style>
+    *{
+    margin: 0px;
+    padding: 0px;
+}
 
+.color1{
+    background-color: {{color}};
+    width: 50px;
+    height: 50px;
+}
+
+
+
+</style>
 
 </head>
 <body>
     <h1>Weclome</h1>
     <table>
         <tr>
-            <td id="box" class="collor1"></td>
+            {% for i in range(0,num)%}
+                <td class="color1"></td>
+            {% endfor %}
+            
+
+
+            <!-- <td class="color1"></td>
             <td class="color1"></td>
             <td class="color1"></td>
             <td class="color1"></td>
-            <td class="color1"></td>
-            <td class="color1"></td>
+            <td class="color1"></td> -->
+
         </tr>
     </table>
 </body>
-</html>S
+</html>
