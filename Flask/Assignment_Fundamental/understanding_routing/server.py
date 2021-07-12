@@ -1,5 +1,4 @@
 from flask import Flask
-from flask.scaffold import F
 
 app = Flask(__name__)
 
@@ -13,11 +12,11 @@ def dojo():
 
 @app.route("/say/<name>")
 def say_hi(name):
-    return F"Hi {name}!"
+    return f"Hi {name}!"
 
-@app.route("/repeat/<int:number>/hello")
-def hello(number):
-    return f"({number} * Hello)"
+@app.route("/repeat/<int:number>/<variable>")
+def hello(number, variable):
+    return variable * number
 
 
 
