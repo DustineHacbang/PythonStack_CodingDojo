@@ -1,0 +1,19 @@
+1.
+SELECT * FROM countries WHERE language LIKE "Slovene%"
+
+2.
+SELECT *  name, cities FROM countries
+
+3.
+SELECT * FROM cities FROM Mexico WHERE population >= 500,000
+
+4.
+SELECT * FROM countries WHERE language > 89%
+
+5. 
+SELECT * FROM countries WHERE surface_area < 501 WHERE population > 100000
+
+6.
+SELECT * FROM countries WHERE government_form LIKE "Constitutional Monarchy" WHERE capital > 200 WHERE life_expectency > 75
+
+7.
