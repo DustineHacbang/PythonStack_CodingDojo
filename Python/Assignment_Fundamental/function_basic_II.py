@@ -24,7 +24,18 @@ print_and_return(list1)
 
 3#
 list1 = [1,2,3,4,5]
-def first_plus_length():
-    var = list1[1] +  
+def first_plus_length(i):
+    var = list1[1] +  len(list1)
+    print(var)
 
+first_plus_length(list1)
 
+4#
+list1 = [5,2,3,2,1,4]
+
+def values_greater_than_second(i):
+    list2 = []
+    if list1[i] > 2
+    list2.append(list[i])
+
+5#
