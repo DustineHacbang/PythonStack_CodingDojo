@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Ninja Gold</title>
+    <!-- <style> 
+    .container1{
+        width: 100px !important;
+        height:100px !important;
+        align-items: center;
+        justify-content: center;   
+    }
+    
+    
+    </style> -->
+</head>
+<body>
+    <!-- <h1 class="text-primary text-center mt-5">Hello</h1> -->
+    <h1 class="mb-5 ml-5 mt-5">Your gold:  {{session['gold']}}    </h1>
+    <div class="d-flex justify-content-between mb-5 ml-5 mr-5">
+        
+        <form class="bg-primary text-center border-secondary text-light p-5" action="/process_money" method="post">
+            <h2>Farm</h2>
+            <p>Earns 10-20 gold</p>
+            <input type="hidden" name="building" value="farm" />
+            <input type="submit" value="Find Gold!"/>
+          </form>
+     
+        
+        <form class="bg-primary text-center border-secondary text-light p-5" action="/process_money" method="post">
+            <h2>Cave</h2>
+            <p>Earns 5-10 gold</p>
+            <input type="hidden" name="building" value="cave" />
+            <input type="submit" value="Find Gold!"/>
+          </form>
+        <form class="bg-primary text-center border-secondary text-light p-5" action="/process_money" method="post">
+            <h2>House</h2>
+            <p>Earns 2-5 gold</p>
+            <input type="hidden" name="building" value="house" />
+            <input type="submit" value="Find Gold!"/>
+          </form>
+        <form class="bg-primary text-center border-secondary text-light p-5" action="/process_money" method="post">
+            <h2>Casino</h2>
+            <p>Loose 0-50 or Gain 0-50 </p>
+            <input type="hidden" name="building" value="casino" />
+            <input type="submit" value="Find Gold!"/>
+          </form>
+    </div>
+    <div class= "ml-5 mr-5">
+        <h5>Activies:</h5>
+        <div>
+            {% for msg in session['msg'] %}
+            <p class="d-flex flex-column">{{session['msg']}}</p>
+            {%endfor%}
+        </div>
+    </div>
+    </body>
+</body>
+</html>
