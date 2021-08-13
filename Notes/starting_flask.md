@@ -107,7 +107,6 @@ def index():
 ```
 
 8. models
-
 models file is where database communications are "queries queries"
     
 ```py
@@ -138,7 +137,6 @@ class Burger:
 ```
 
 9. \_\_init__.py
-
 ```py
 
 # __init__.py
