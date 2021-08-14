@@ -14,7 +14,7 @@
 4. create folder structor
     - server.py
     - flask_app
-        - template folder 
+        - templates 
         - config
             - mysqlconnection.py
         - controllers
@@ -33,7 +33,7 @@
 ```py
 # Import Flask to allow us to create our app
 from flask_app import app  
-from flask_app.controllers import cities
+from flask_app.controllers import users
 # Ensure this file is being run directly and not from a different module    
 if __name__=="__main__":  
  # Run the app in debug mode.     
@@ -57,14 +57,14 @@ class MySQLConnection:
                                     db = db,
                                     charset = 'utf8mb4',
                                     cursorclass = pymysql.cursors.DictCursor,
-                                    autocommit = True)
+                                    autocommit = True)
 # establish the connection to the database
         self.connection = connection
 # the method to query the database
     def query_db(self, query, data=None):
         with self.connection.cursor() as cursor:
             try:
-                query = cursor.mogrify(query, data)
+                query = cursor.mogrify(query, data)
                 print("Running Query:", query)
 
                 executable = cursor.execute(query, data)
@@ -84,7 +84,7 @@ class MySQLConnection:
                 print("Something went wrong", e)
                 return False
             finally:
-                # close the connection
+# close the connection
                 self.connection.close() 
 # connectToMySQL receives the database we're using and uses it to create an instance of MySQLConnection
 def connectToMySQL(db):
