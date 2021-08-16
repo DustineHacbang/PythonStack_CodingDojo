@@ -36,7 +36,7 @@ from flask_app import app
 from flask_app.controllers import users
 # Ensure this file is being run directly and not from a different module    
 if __name__=="__main__":  
- # Run the app in debug mode.     
+# Run the app in debug mode.     
     app.run(debug=True)   
 
 
@@ -92,7 +92,6 @@ def connectToMySQL(db):
 ```
 
 7. controller
-
     the controller is where all your routes are stored
 ```py
 
@@ -100,7 +99,8 @@ from flask_app import app
 from flask import render_template,redirect,request,session,flash
 #from {model_folder} import {model_file}
 
-@app.route('/')          # The "@" decorator associates this route with the function immediately following
+# The "@" decorator associates this route with the function immediately following
+@app.route('/')
 def index():
     return render_template('index.html') 
 
@@ -110,7 +110,7 @@ def index():
 models file is where database communications are "queries queries"
     
 ```py
-    from flask_app.config.mysqlconnection import connectToMySQL
+from flask_app.config.mysqlconnection import connectToMySQL
 # burger.py
 class Burger:
     def __init__(self,data):

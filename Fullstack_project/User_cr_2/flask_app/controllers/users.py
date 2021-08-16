@@ -6,16 +6,17 @@ from flask_app.models.users import User
 # The "@" decorator associates this route with the function immediately following
 @app.route('/')
 def index():
-    return render_template('create.html') 
+    return redirect('/users')
+
 
 @app.route('/users')
 def users():
-    return render_template("create.html",users=users.get_all())
+    return render_template("users.html",users=User.get_all())
 
 
 @app.route('/user/new')
 def new():
-    return render_template("create.html")
+    return render_template("new_user.html")
 
 @app.route('/user/create',methods=['POST'])
 def create():
