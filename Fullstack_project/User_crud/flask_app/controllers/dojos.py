@@ -24,8 +24,8 @@ def show_dojo(id):
     }
     return render_template('dojo.html', dojo=Dojo.get_one_with_ninjas(data))
 
-
-# @app.route('/create/dojo',methods=['POST'])
-# def create_dojo():
-#     Dojo.save(request.form)
-#     return redirect('/dojos')
+#this saves the dojo that is created
+@app.route('/create/dojo',methods=['POST'])
+def create_dojo():
+    Dojo.save(request.form)
+    return redirect('/dojos')

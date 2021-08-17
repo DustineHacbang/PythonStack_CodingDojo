@@ -1,8 +1,10 @@
 1. create folder 
 
-2. install flask & pymysql
+2. install bcrypt, flask, & pymysql
     ```
     pipenv install PyMySQL flask
+    pipenv install flask-bcrypt
+
 
     ```
 
@@ -112,7 +114,7 @@ models file is where database communications are "queries queries"
 ```py
 from flask_app.config.mysqlconnection import connectToMySQL
 # burger.py
-class Burger:
+class User:
     def __init__(self,data):
         #this is where your collunm names will be placed at
         self.id = data['id']
