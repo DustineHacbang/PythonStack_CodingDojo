@@ -2,7 +2,7 @@
 
 2. install flask & pymysql
     ```
-    python -m pipenv install flask pymysql
+    pipenv install PyMySQL flask
 
     ```
 
