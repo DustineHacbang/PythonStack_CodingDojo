@@ -1,7 +1,7 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 
 class Ninja:
-
+#sets perameeters of the ninja table
     def __init__(self, data):
         self.id = data['id']
         self.first_name = data['first_name']
@@ -10,6 +10,7 @@ class Ninja:
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
 
+#saves new ninja regestration
     @classmethod
     def save(cls,data):
         query = "INSERT INTO ninjas (first_name, last_name,age,dojo_id) VALUES (%(first_name)s, %(last_name)s, %(age)s, %(dojo_id)s);"
