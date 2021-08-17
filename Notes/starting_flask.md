@@ -8,7 +8,7 @@
 
 3. lunch shell
     ```
-    pinenv shell
+    pipnenv shell
     ```
 
 4. create folder structor
