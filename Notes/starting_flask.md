@@ -2,8 +2,8 @@
 
 2. install bcrypt, flask, & pymysql
     ```
-    pipenv install PyMySQL flask
-    pipenv install flask-bcrypt
+pipenv install PyMySQL flask
+pipenv install Flask-Bcrypt
 
 
     ```
